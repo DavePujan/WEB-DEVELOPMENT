@@ -1,0 +1,29 @@
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(84, 84, 217);
+
+   /* position: relative;  */
+   /* top: -100px; */
+    /* left: 50px;  */
+
+    /* position: fixed; */
+    /*this box can be fixed in right by applying right 0px*/
+    /* right: 0px; */
+    /* bottom: 0px; */
+
+    /*stickey is nearly similar to fixed, but it will take space for its box , and in fixed it will not take space (come on below paragraph)*/
+    /* position: sticky; */
+    /* top: 0px; */
+
+    /* position: static; */
+
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 222, 35);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}

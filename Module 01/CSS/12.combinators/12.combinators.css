@@ -1,0 +1,21 @@
+#container{
+    border: 2px solid ;
+}
+
+/*try all of these by applying*/
+
+#container p{
+    background-color: yellow;
+}
+
+#container > p {
+    background-color: pink;
+}
+
+#container ~ p{
+    background-color: red;
+}
+
+#container + p {
+    background-color: green;
+}

@@ -1,0 +1,37 @@
+a:link{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: pink;
+    font-size: 1.1em;
+}
+a:active{
+    font-size: 1.1em;
+    color: red;
+}
+a:visited{
+    color: blue;
+}
+
+li:hover{
+    background-color: yellow;
+}
+
+li:not(:hover){
+    background-color: pink;
+}
+
+li:nth-child(2){ 
+    /*you can type odd,even , 3n, 3n+1 etc*/
+    background-color: blue;
+}
+
+#greeting p{
+    background-color: rgb(167, 167, 255);
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: block;
+}

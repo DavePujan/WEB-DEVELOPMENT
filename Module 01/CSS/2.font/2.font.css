@@ -1,0 +1,11 @@
+@font-face{
+    src:url(font/Roboto-Regular.ttf);
+    font-family: Roboto-Regular;
+}
+
+/* h1{
+    font-family: fantasy;
+} */
+#font2{
+    font-family: "Roboto-Regular ";
+}

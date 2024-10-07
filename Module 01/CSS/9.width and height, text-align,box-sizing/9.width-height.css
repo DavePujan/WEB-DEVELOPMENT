@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color: gray;
+    height: 100vh;
+}
+.box{
+    background-color: #fff;
+    border: 2px solid;
+    padding: 25px;
+
+
+    height: auto;
+    height: 200px;
+
+    width: auto;
+    width: 50%;
+    float: left; /* or */
+    /* float: right; */
+
+    /*to place all text of box in center*/
+    text-align: center;
+
+    /* for media*/
+    /* max-width: 30%; */
+    /* min-width: 75%; */
+
+    /* min-height: 50%; */
+    /* max-height: 75%; */
+}

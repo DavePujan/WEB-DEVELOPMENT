@@ -1,0 +1,30 @@
+/* try all of this by applying*/
+div {
+  background-color: red;
+
+  /*we can apply height width as we needed andit will work properly */
+  /* width: 100px; 
+    height: 100px; */
+
+  /* div is by default block level element we can make it inline element by display property*/
+  /* display: inline; */
+
+  /*display: none will make our content disappear. same as visibility : hidden but it will take up space of your element*/
+  /* visibility: hidden; */
+  /* display: none; */
+}
+span {
+  background-color: blue;
+
+  /* for span we cant apply height and width and if we apply it will be never gonna apply*/
+  /* height: 100px;
+    width: 100px; */
+
+  /* span is by default inline element we can make it block element by applying display property*/
+  /* display: block; */
+
+  /*inline-block it is much more like inline but in this we are able to apply height and width also.*/
+  /* display: inline-block;
+        height: 100px;
+         width: 100px; */
+}

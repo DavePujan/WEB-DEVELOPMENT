@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#box1 {
+  background-color: red;
+  border: 3px solid black;
+}
+#img1 {
+  float: left;
+}
+#img2 {
+  float: right;
+}
+
+#box2 {
+  background-color: rgb(119, 81, 87);
+  border: 3px solid black; /* to keep all the images and elements inside the box */
+  margin-top: 5px;
+}
