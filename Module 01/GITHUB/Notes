@@ -1,0 +1,40 @@
+git --version
+git status
+
+cd foldername --> to go to that folder
+
+git config --global user.name "name"
+
+git init
+git branch -m newName  --> to change the name of branch
+
+git add fileName  --> to add perticular file
+git add .      --> to add all files
+
+git rm --cached filename     --> to unstage file
+
+git commit -m "message"
+
+git log
+git log --oneline
+
+git config --global core.editor "code --wait"     --> to select default vscode command pallate
+
+.gitignore file --> add those files which you don't want to add.
+
+.gitkeep file --> add this file in that empty folder which you want to consider while commiting.
+
+
+git branch bug-fix     --> to create new branch named bug-fix
+
+git switch bug-fix
+
+git switch -c dark-mode     --> it will check if that named branch exist or create new branch for us.
+
+git checkout orange-mode    --> it will just check if branch exist or not. and if exist then it will switch the head to that branch.
+
+git merge bug-fix           --> go to master branch and then merge the branches.
+
+git merge --abort           --> use it when conflict occur and the merge will fail.
+
+git branch -d dark-mode     --> to delete branch
