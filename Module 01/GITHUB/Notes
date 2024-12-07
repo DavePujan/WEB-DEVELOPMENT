@@ -29,7 +29,7 @@ git branch bug-fix     --> to create new branch named bug-fix
 
 git switch bug-fix
 
-git switch -c dark-mode     --> it will check if that named branch exist or create new branch for us.
+git switch -c dark-mode or  git checkout -b dark-mode     --> it will check if that named branch exist or create new branch for us.
 
 git checkout orange-mode    --> it will just check if branch exist or not. and if exist then it will switch the head to that branch.
 
@@ -38,3 +38,5 @@ git merge bug-fix           --> go to master branch and then merge the branches.
 git merge --abort           --> use it when conflict occur and the merge will fail.
 
 git branch -d dark-mode     --> to delete branch
+
+New-Item -ItemType File -Name filename.txt   --> to create new file.
