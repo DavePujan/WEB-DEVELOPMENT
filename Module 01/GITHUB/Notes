@@ -39,4 +39,18 @@ git merge --abort           --> use it when conflict occur and the merge will fa
 
 git branch -d dark-mode     --> to delete branch
 
-New-Item -ItemType File -Name filename.txt   --> to create new file.
+ni -ItemType File -Name filename.txt   --> to create new file.
+
+git diff --staged  --> you can see diff when you staged any file. (but for this  you have to do git add . and then you can see the diff)
+
+git diff 196a6b3 e155ccc  or  git diff 196a6b3..e155ccc
+
+git stash  --> to store your work temporary in your current branch.
+git stash list
+git stash save "Work in Progress of file2"  --> to add message
+
+git stash apply
+git stash drop
+gti stash pop     --> it is like apply + drop both.
+
+git stash clear
