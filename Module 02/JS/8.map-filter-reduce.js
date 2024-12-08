@@ -13,3 +13,19 @@ newArr = array.map ((e) => {
 })
 
 console.log(newArr)
+
+let array2 = [ 3,66,77,44,2]
+const greaterThanThree = (e) => {
+    if (e>3) {
+        return true
+    }return false
+}
+console.log(array2.filter(greaterThanThree))
+
+const red = (a,b)=>{
+    return a * b
+}
+console.log(array.reduce(red))
+
+let sname = "poojan"
+console.log(Array.from(sname))
