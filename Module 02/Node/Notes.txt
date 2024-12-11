@@ -1,0 +1,30 @@
+node .\2.server.js to run
+npm init to create the package.json
+use npm i nodemon to add node modules
+use npm i --global nodemon to install is globally
+
+import  { } from ''     --> type:module
+or
+const { } = require{''}
+
+don't need type module(commonJS)
+module.exports = {
+    a:1, b:4,
+    c: "hello"
+}
+const {a} = require("./4.export-ecmaScript")
+
+module.export.add = function(a,b) {
+    return a + b;
+}
+const {add} = require('./fileName)
+console.log(add(5,5))
+
+ecmaScript  --> need type Module
+export const a = 6 // named export
+export default obj = {
+    x:7, y:8
+}
+
+console.log(__dirname)
+console.log(__filename)

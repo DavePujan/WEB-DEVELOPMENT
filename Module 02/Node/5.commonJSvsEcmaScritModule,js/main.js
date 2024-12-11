@@ -16,4 +16,4 @@ server.listen(port, hostname, () => {
 });
 
 
-// see package.json here we have added type:module , so when we are changeing tpe to module from commonJS we can't use require keyword, you have to use import http fromm "http" here.
+// see package.json here we have added type:module , so when we are changeing tpe to module from commonJS we can't use require keyword, you have to use import http from "http" here.
