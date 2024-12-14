@@ -1,5 +1,5 @@
 // this is lec 88
-//let's check which ifle will be shown to us : file in public vs file in main folder
+//let's check which file will be shown to us : file in public vs file in main folder
 
 const express = require('express')
 const app = express()

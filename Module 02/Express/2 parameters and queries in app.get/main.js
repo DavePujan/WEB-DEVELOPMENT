@@ -1,7 +1,7 @@
 // this is lec 88
 
 /* http://localhost:3000/blog/intro-to-js?mode=dark&region=in
- here blog and intro to js are parameters and mode= dark and region in both are query parameters.
+ here blog and intro to js are parameters and (mode = dark) and (region = in) both are query parameters.
  */
 const express = require('express')
 const app = express()

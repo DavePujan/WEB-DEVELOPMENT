@@ -41,8 +41,8 @@ app.get('/index', (req, res) => {
   res.sendFile('tamplates/index.html', { root: __dirname })
 })
 
-//send json file through api
 
+//send json file through api
 app.get('/api', (req, res) => {
   res.json({ a: 5, b: 6, name: ["poojan", "harsh"] })
 })

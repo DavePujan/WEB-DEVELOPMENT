@@ -7,7 +7,10 @@ import  { } from ''     --> type:module
 or
 const { } = require{''}
 
-don't need type module(commonJS)
+
+
+
+don't need type module(commonJS)        --> const + module.export
 module.exports = {
     a:1, b:4,
     c: "hello"
@@ -17,14 +20,23 @@ const {a} = require("./4.export-ecmaScript")
 module.export.add = function(a,b) {
     return a + b;
 }
-const {add} = require('./fileName)
+const {add} = require('./fileName')
 console.log(add(5,5))
+
+
+
 
 ecmaScript  --> need type Module
 export const a = 6 // named export
+import {a} from "./2.export-ecmaScript.js" // named
+
+
 export default obj = {
     x:7, y:8
 }
+import poojan from "./2.export-ecmaScript.js" // you can give any name to default import
+
+
 
 console.log(__dirname)
 console.log(__filename)
