@@ -3,7 +3,7 @@
 // dirname  : full path
 // extname  : extension name
 // basename : file name
-
+// Join: it join the given path
 import path from "path"
 
 let extname = (".\\Node\\8. fs and path modules\\path-module.js")
