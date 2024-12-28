@@ -1,0 +1,97 @@
+<!-- this is lec 67 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 45px;
+            width: 45px;
+            background-color: red;
+            margin: 5px;
+            border: 2px solid black;
+            padding: 5px;
+        }
+        tr{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- this is comment node -->
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+    </div>
+
+    <table style="background-color:aqua; border: 2px solid black; width: 150px;">
+        <caption>
+            This is caption
+        </caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>age</th>
+            </tr>
+        </thead>
+       <tbody>
+            <tr>
+                <th>Harry</th>
+                <th>100</th>
+            </tr>
+            <tr>
+                <th>rohan</th>
+                <th>100</th>
+            </tr>
+       </tbody>
+       <tfoot >
+              <tr style="background-color: rgb(0, 191, 255);">
+                <th>total</th>
+                <th>200</th>
+              </tr>
+       </tfoot>
+        
+    </table>
+
+    <script>
+        console.log("hellow world")
+        document.body
+        document.body.childNodes
+        document.body.childNodes[1]
+        let cont = document.body.childNodes[1]
+
+        cont.firstChild
+        cont.lastChild
+
+        cont.firstElementChild
+        document.body.firstElementChild.children
+        cont.firstElementChild.style.backgroundColor = "green"
+        cont.firstElementChild.parentElement
+
+        cont.lastElementChild.previousElementSibling
+        cont.firstElementChild.nextElementSibling
+
+        document.body.children[1]
+
+
+        //on table
+
+        const table = document.body.children[1]
+table.rows
+table.thead
+table.childNodes
+table.childNodes[1]
+table.childNodes[3]
+table.lastElementChild
+    </script>
+</body>
+
+</html>
