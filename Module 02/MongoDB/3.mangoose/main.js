@@ -2,8 +2,8 @@
 // https://www.npmjs.com/package/mongodb
 
 import mongoose from 'mongoose';
-import express from 'express'; 
-import { Todo } from './models/Todo.js'; 
+import express from 'express';
+import { Todo } from './models/Todo.js';
 
 
 let conn = await mongoose.connect('mongodb://localhost:27017/todo');
@@ -11,12 +11,12 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-    const todo = new Todo({
-        title: 'Buy the milk',
-        desc: 'Go to the store and buy the milk',
-        isDone: false
-    });
-    todo.save();
+  const todo = new Todo({
+    title: 'Buy the milk',
+    desc: 'Go to the store and buy the milk',
+    isDone: false
+  });
+  todo.save();
 
   res.send('Hello World!')
 })
