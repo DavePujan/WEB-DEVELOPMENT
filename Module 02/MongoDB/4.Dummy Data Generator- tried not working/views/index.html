@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Data Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #generateData {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style></head>
+<body>
+  <h1>Employee Data Generator</h1>
+  <button id="generateData">Generate Data</button>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById('generateData').addEventListener('click', function() {
+      const messageElement = document.getElementById('message');
+      messageElement.innerText = 'Generating data...';
+
+      fetch('/add')
+        .then(response => response.json())
+        .then(data => {
+          messageElement.innerText = data.message;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          messageElement.innerText = 'Error generating data: ' + error.message;
+        });
+    });
+  </script>
+</body>
+</html>
