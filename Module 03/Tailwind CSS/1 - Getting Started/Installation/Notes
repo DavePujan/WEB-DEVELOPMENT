@@ -1,0 +1,41 @@
+Installation:
+
+type 1: using CDN 
+add this into your html file.
+
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+type 2:
+type this into your terminal:
+npm create vite@latest my-project --template 
+
+then type 'y'
+then select frameworks
+
+then run  cd my-project
+ npm install tailwindcss @tailwindcss/vite
+
+ then in vite.config.js add 
+    import { defineConfig } from 'vite'
+    import tailwindcss from '@tailwindcss/vite'
+    export default defineConfig({
+    plugins: [
+        tailwindcss(),
+    ],
+    })
+
+then in src/index.css add
+    @import "tailwindcss";
+
+then do: npm run dev
+
+Type 3: using CLI
+in your folder run npm init -y
+
+then run npm install tailwindcss @tailwindcss/cli
+
+then in src folder create input.css and add @import "tailwindcss";
+
+then run: npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+
+then create index.html and write your code and then open it with live server.
