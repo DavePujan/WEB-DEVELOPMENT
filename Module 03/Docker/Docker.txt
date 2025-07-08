@@ -1,0 +1,98 @@
+docker version
+docker images
+
+docker pull ubuntu:latest
+Docker tries to pull the latest Ubuntu image from Docker Hub
+
+use of ps command:
+1.You ran an interactive Ubuntu container
+docker run -it ubuntu:latest
+
+2.Then, inside the container, you ran:
+ps -elf
+This showed the running processes in the container: then use ctrl + PQ to exit container
+ex:
+PID 1: /bin/bash (the shell you're in)
+PID 9: ps -elf (the process you just ran)
+
+3.You ran docker ps again from the host
+docker ps
+This time, Docker showed one running container:
+ex:
+CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS          PORTS     NAMES
+5d1a64bbdb39   ubuntu:latest   "/bin/bash"   24 seconds ago   Up 23 seconds             determined_tesla
+
+
+exec command:
+# Start a container
+docker run -dit --name mytest ubuntu
+
+# Exec into it
+docker exec -it mytest bash
+# Now you're inside the container shell
+
+The docker exec command runs a new command inside an existing, running container.
+
+🧠 When to Use docker exec:
+Use Case	Example
+Get a shell into a container	docker exec -it mycontainer bash
+Run a one-time command	docker exec mycontainer ls /app
+Debug something inside a running app	docker exec -it mycontainer top
+Inspect environment	docker exec mycontainer env
+
+🔍 Difference from Other Commands
+Command	Purpose
+docker run	Starts a new container and runs a command
+docker exec	Runs a new command inside an existing, running container
+docker attach	Connects to the main process of a running container
+
+stop container:
+docker stop vigilant_borg
+
+remove container:
+docker rm vigilant_borg
+
+Step-by-Step: Pull Image → Start → Attach → Execute → Stop → Delete
+✅ 1. Pull a Docker Image
+docker pull ubuntu
+✅ 2. Start a Container from the Image
+docker run -dit --name mycontainer ubuntu
+✅ 3. Attach to the Running Container (Optional)
+If you want to connect to its main shell:
+docker attach mycontainer
+⚠️ Pressing Ctrl+C here will stop the container. Use Ctrl+P, Ctrl+Q to safely detach.
+
+✅ 4. Execute a Command Inside the Container
+docker exec -it mycontainer bash
+Now you're in a shell inside the container.
+
+You can run commands like:
+ps -elf
+apt update
+Or just:
+docker exec mycontainer echo "Hello from inside!"
+✅ 5. Stop the Container
+docker stop mycontainer
+✅ 6. Delete (Remove) the Container
+docker rm mycontainer
+🔁 If the container is still running, you can force removal with:
+docker rm -f mycontainer
+
+
+The Dockerfile is a plain-text document that tells Docker how to build the app and
+dependencies into a Docker image.
+
+Now see .\dev_perspective_test\cmd to see dev perspective use of docker
+
+
+
+
+Piyush Lec 
+port mapping:
+docker run -it -p 1025:1025 mailhog/mailhog 
+
+Port mapping connects a port on the host machine to a port on a container, allowing external traffic to reach services running inside the container.
+
+docker run -p <host_port>:<container_port> <image>
+Example:
+docker run -p 8080:80 nginx

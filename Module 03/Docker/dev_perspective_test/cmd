@@ -1,0 +1,26 @@
+git clone https://github.com/nigelpoulton/psweb.git
+cd .\psweb\
+
+ls --> to see whats inside
+
+cat .\Dockerfile --> to see the content of dockerfile
+
+To build a Docker image with the tag test:latest, navigate to the directory containing the Dockerfile and run the following command:
+docker build -t test:latest .
+
+now run the container and test the app [ note that powershell dont suppoer \ , we have to use `]
+docker run -d `
+>> --name web1 `
+>> --publish 8080:8080 `
+>> test:latest
+
+
+
+
+
+
+
+pull
+ls 
+build 
+run -it
