@@ -89,10 +89,24 @@ Now see .\dev_perspective_test\cmd to see dev perspective use of docker
 
 Piyush Lec 
 port mapping:
-docker run -it -p 1025:1025 mailhog/mailhog 
+    docker run -it -p 1025:1025 mailhog/mailhog 
 
-Port mapping connects a port on the host machine to a port on a container, allowing external traffic to reach services running inside the container.
+    Port mapping connects a port on the host machine to a port on a container, allowing external traffic to reach services running inside the container.
 
-docker run -p <host_port>:<container_port> <image>
-Example:
-docker run -p 8080:80 nginx
+    docker run -p <host_port>:<container_port> <image>
+    Example:
+        docker run -p 8080:80 nginx
+
+Docker Environment Variables:
+    docker run -e VAR_NAME=value image
+
+    Set up node app in docker using Dockerfile :
+    FROM node
+
+    COPY package.json package.json
+    COPY package-lock.json package-lock.json
+    COPY main.js main.js
+
+    RUN npm install
+
+    ENTRYPOINT [ "node", "main.js" ]

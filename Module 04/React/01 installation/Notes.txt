@@ -1,0 +1,21 @@
+https://youtu.be/k3KqQvywToE?si=EZ6aa1X2PmcBlbCX
+
+Core Lib: react , react-dm , react-native
+
+Basic installation:
+
+npx create-react-app name-of-folder
+executer + utility
+
+you can use npm run start
+or npm run build : when you use build , the build folder was served to user in production , not src folder, build folder will have html css js which is converted version of your react app code.
+
+installation with vite:
+npm create vite@latest
+cd 01-vite-react-app
+npm install
+npm run dev
+
+now delete this files(unwanted) : src:setupTests.js , src:reportWebVitals.js , src:logo.svg , src:appTest.js ,{ src:app.css, src:index.js } ( if you want to)
+
+what is folder structure and its name and use?
