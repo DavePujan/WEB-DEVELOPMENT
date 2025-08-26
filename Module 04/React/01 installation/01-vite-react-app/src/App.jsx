@@ -1,8 +1,12 @@
+import Chai from './chai.jsx'
 
 function App() {
  
   return (
-   <h1> Hello React With Vite</h1>
+    <> // this is fragment
+    <h1>Hello + </h1>
+    <Chai />
+   </>
   )
 }
 

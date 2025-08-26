@@ -1,21 +1,132 @@
-https://youtu.be/k3KqQvywToE?si=EZ6aa1X2PmcBlbCX
+Lec 1 and 2
+📘 React Documentation Notes
+============================
 
-Core Lib: react , react-dm , react-native
+🔹 Core Libraries:
+    - react
+    - react-dom
+    - react-native
 
-Basic installation:
+-------------------------------------------
 
-npx create-react-app name-of-folder
-executer + utility
+⚡ Basic Installation (CRA - Create React App):
 
-you can use npm run start
-or npm run build : when you use build , the build folder was served to user in production , not src folder, build folder will have html css js which is converted version of your react app code.
+    npx create-react-app name-of-folder
+    cd name-of-folder
 
-installation with vite:
-npm create vite@latest
-cd 01-vite-react-app
-npm install
-npm run dev
+    # Run app in development
+    npm run start
 
-now delete this files(unwanted) : src:setupTests.js , src:reportWebVitals.js , src:logo.svg , src:appTest.js ,{ src:app.css, src:index.js } ( if you want to)
+    # Build app for production
+    npm run build
 
-what is folder structure and its name and use?
+    ➝ NOTE: In production, the **build** folder (containing HTML, CSS, JS) is served.
+             Not the **src** folder.
+             The build folder is the optimized, converted version of your React code.
+
+-------------------------------------------
+
+⚡ Installation with Vite (Faster Bundler):
+
+    npm create vite@latest
+    cd 01-vite-react-app
+    npm install
+    npm run dev
+
+    🧹 Clean up unnecessary files (optional):
+        src/setupTests.js
+        src/reportWebVitals.js
+        src/logo.svg
+        src/App.test.js
+        src/App.css
+        src/index.css
+        src/index.js   (if you want to restructure)
+
+-------------------------------------------
+
+📂 React Project Folder Structure:
+-------------------------------------------
+
+    node_modules/    → all external dependencies (auto-created)
+    public/          → static files (index.html, images, icons)
+    src/             → main React source code
+        App.js       → main component
+        index.js     → entry point of React app
+        components/  → reusable UI components
+        assets/      → images, styles, fonts, etc.
+
+-------------------------------------------
+
+📌 Entry Point Code (index.js):
+
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    import App from './App';
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+
+    root.render(
+        <App />
+    );
+
+-------------------------------------------
+
+✅ Summary:
+    - "src" folder = your actual React code.
+    - "public" folder = static assets & root HTML.
+    - "build" folder = optimized production files.
+    - CRA is slower, Vite is faster & recommended.
+
+Lec 3:
+
+-------------------------------------------------------
+📌 Import & Export in React
+
+- If you want to render any file/component:
+  1. First export it using:
+        export default Chai;
+
+  2. Then import it where needed:
+        import Chai from "./Chai";
+
+-------------------------------------------------------
+📌 Naming Conventions
+
+- Always use **Capital letters** when rendering a component.
+  
+  Example:
+    return (
+      <Chai />
+    )
+
+- The function name and the imported component name 
+  must start with a capital letter.
+  
+- File format should be **.jsx** (not .js for components).
+- Best practice: Use **camelCase / PascalCase** for file names.
+  
+  Examples:
+    - App.jsx
+    - Chai.jsx
+
+-------------------------------------------------------
+📌 JSX Return Rule
+
+- A JSX function can only return **one element**.
+- If multiple elements are needed, wrap them in a **Fragment**:
+  
+  Example:
+    return (
+      <>
+        <h1>Hello</h1>
+        <p>Welcome to React</p>
+      </>
+    )
+
+-------------------------------------------------------
+✅ Summary
+- Use `export default` when creating a component.
+- Import with `import ComponentName from "./ComponentName";`
+- Component names must start with **Capital Letters**.
+- File names should follow **PascalCase** convention.
+- JSX must return only one element → wrap multiple in `<>...</>`.
