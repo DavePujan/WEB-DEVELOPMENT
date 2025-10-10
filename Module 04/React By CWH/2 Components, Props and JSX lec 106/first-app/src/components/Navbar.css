@@ -1,0 +1,22 @@
+div{ 
+    color: tomato;
+    background-color: white;
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin: 0 20px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
