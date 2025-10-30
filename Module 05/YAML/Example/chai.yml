@@ -1,0 +1,221 @@
+version : 3.2
+
+chai_type : blacktea
+serving_size : 250
+
+#  this is comment
+
+# this is object with list (use 2 spaces for indentation not tabs)
+chai_recipe :
+  boil_water : 200 ml
+  add_tea_leaves : 2 tsp
+  brew_time : 5 mins
+  add_milk : 50 ml
+  add_sugar : to taste
+
+# datatypes
+# string (all are valid but double quotes are preferred)
+favorite_snack : Cream biscuits
+flavor: "Masala Chai"
+tagline: 'The perfect blend of spices and tea'
+
+# multi-line string for writting long instructions (don't write without indentation means 2 spaces)
+boiling-Instructions: |
+  1. Boil water in a pot.
+  2. Add tea leaves and spices.
+  3. Let it brew for 5 minutes.
+  4. Add milk and sugar as per taste.
+  5. Strain and serve hot.
+
+# multi-line string folded style (used bracause we can fold it to single line by clicking down error in many editors)
+boiling-Instructions_two: >
+  1. Boil water in a pot.
+  2. Add tea leaves and spices.
+  3. Let it brew for 5 minutes.
+  4. Add milk and sugar as per taste.
+  5. Strain and serve hot.
+
+
+# integer
+number_of_cups : 2
+number_of_cups_for_second_tea : 0xFF22FF  # hexadecimal
+number_of_cups_for_third_tea: 0o12  # octal
+number_of_cups_for_fourth_tea: 0b1010  # binary
+
+# boolean
+is_hot : true
+add_sugar: yes
+is_iced : false
+add_milk: no
+instant: off
+is_online_order: on
+
+# float
+temperature : 75.5
+
+# null
+special_instruction : null
+alternative_tea : ~
+
+# timestamps
+last_prepared : 2024-10-01T10:30:00Z
+next_preparation : 2024-10-02
+more_info : 2024-10-01T10:30:00+05:30
+
+preffered_time : 10:30:00
+preffered_date : 2024-10-02
+preffered_format: 2024-10-01 10:30:00
+
+
+# list
+available_flavors :
+  masala
+  ginger
+  elaichi
+
+another_list_of_snacks : # list allow different data types 
+  - samosa
+  - pakora
+  - true 
+  - 42
+  - 3.14
+
+one_more_snack_list :
+  - "doughnut"
+  - 'muffin'
+  - "brownie"
+
+another_formatted_list :
+  - item1 : "butter cookie"
+  - item2 : 'chocolate chip cookie'
+  - item3 : "oatmeal raisin cookie"
+
+# not used nowadays but valid
+spices: [
+  cinnamon,
+  cardamom,
+  ginger,
+  cloves,
+  black_pepper
+]
+
+# nested list
+nutrition_facts :
+  - calories : 150
+  - protein : 3 g
+  - fat : 5 g
+  - carbohydrates : 25 g  
+  - vitamins :
+    - vitamin_a : 2 %
+    - vitamin_c : 0 %
+    - calcium : 15 %  
+    - iron : 4 %
+  - minerals :
+    - sodium : 10 mg
+    - potassium : 100 mg
+
+# this is nested object with nested list
+masala_spices :
+  primary_spices :
+    type: whole
+    spices_list : 
+      - cardamom
+      - cinnamon
+      - cloves
+  
+  secondary_spices :
+    type: ground
+    spices_list :
+      - ginger
+      - black_pepper
+  
+# list of dictionaries (dont add extra indentation or enter line between items)
+popular_chai_variants :
+  - variant_name : masala_chai
+    ingredients :
+      - tea_leaves
+      - milk
+      - sugar
+      - spices
+  - variant_name : ginger_chai
+    ingredients :
+      - tea_leaves
+      - milk
+      - sugar
+      - ginger
+  - variant_name : elaichi_chai
+    ingredients :
+      - tea_leaves
+      - milk
+      - sugar
+      - cardamom
+
+# anchor and alias
+default_recipe: &default_chai_recipe
+  boil_water : 200 ml
+  add_tea_leaves : 2 tsp
+  brew_time : 5 mins
+  add_milk : 50 ml
+  add_sugar : to taste
+default_chai_base: &default_chai_base
+  chai_type : blacktea
+  serving_size : 250
+
+# refering anchor using alias (can add more properties if needed)
+morning_chai:
+  << : [*default_chai_base, *default_chai_recipe]
+  milk_preference : full_cream
+
+evening_chai:
+  << : [*default_chai_base, *default_chai_recipe]
+  milk_preference : skimmed
+
+# explicit datatypes 
+# format : New-type_examples : !!new type "old type"
+string_example : !!str 12345
+integer_example : !!int "67890"
+float_example : !!float "3.14159" 
+boolean_example : !!bool "true"
+null_example : !!null "null"
+
+# explicit collection types (used for specific use cases like making collections immutable or ensuring uniqueness)
+unique_spices : !!set
+  ? cardamom
+  ? cinnamon
+  ? ginger
+
+
+
+# multi documents
+---   
+version : 1.0
+chai_type : greentea
+serving_size : 200
+chai_recipe :
+  boil_water : 180 ml
+  add_tea_leaves : 2 tsp
+  brew_time : 4 mins
+  add_milk : 20 ml
+  add_sugar : to taste
+---
+version : 2.0
+chai_type : oolong
+serving_size : 220
+chai_recipe :
+  boil_water : 200 ml
+  add_tea_leaves : 2 tsp
+  brew_time : 5 mins
+  add_milk : 30 ml
+  add_sugar : to taste
+---
+version : 3.0
+chai_type : herbal
+serving_size : 250
+chai_recipe :
+  boil_water : 250 ml
+  add_tea_leaves : 0 tsp
+  brew_time : 7 mins
+  add_milk : 0 ml
+  add_sugar : to taste
+
+

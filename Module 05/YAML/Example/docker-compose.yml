@@ -1,0 +1,30 @@
+version: '3.8' # Specifies the Compose file format version
+
+services:
+  web: # Defines a service named 'web'
+    build: . # Builds the image from the Dockerfile in the current directory
+    ports:
+      - "80:80" # Maps host port 80 to container port 80
+    depends_on:
+      - db # Ensures the 'db' service starts before 'web'
+    environment:
+      DATABASE_URL: postgres://user:password@db:5432/mydb # Sets an environment variable
+    networks:
+      - app-network # Connects to the 'app-network'
+
+  db: # Defines a service named 'db'
+    image: postgres:latest # Uses the official PostgreSQL image
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db-data:/var/lib/postgresql/data # Mounts a named volume for data persistence
+    networks:
+      - app-network # Connects to the 'app-network'
+
+volumes:
+  db-data: # Defines the named volume 'db-data'
+
+networks:
+  app-network: # Defines a custom network 'app-network'
