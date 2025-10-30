@@ -1,9 +1,6 @@
-Based on the provided data, here is the complete, perfectly formatted Markdown file:
-
-````markdown
 # YAML — The Complete Guide
 
-## 📘 Introduction
+## Introduction
 
 YAML stands for **"YAML Ain’t Markup Language"**.
 It is a **data serialization language** designed to be **human-readable** and **easy to write**.
@@ -17,7 +14,7 @@ YAML is popular in:
 
 ---
 
-## 🧩 Why Use `.yml` or `.yaml` Files?
+## Why Use `.yml` or `.yaml` Files?
 
 YAML allows you to represent **hierarchical data** clearly, without clutter like braces `{}` or commas.
 
@@ -29,11 +26,11 @@ YAML allows you to represent **hierarchical data** clearly, without clutter like
 - Works as a **universal config format**.
 
 Both `.yml` and `.yaml` extensions work — use whichever your team prefers.
-> 💡 Tip: YAML is indentation-sensitive, always use **2 spaces (not tabs)**.
+> Tip: YAML is indentation-sensitive, always use **2 spaces (not tabs)**.
 
 ---
 
-## 🧠 Basic Syntax Rules
+## Basic Syntax Rules
 
 1. **Key–Value Pairs** — written with a colon (`:`)
 2. **Indentation** — exactly **2 spaces**, no tabs.
@@ -55,11 +52,6 @@ chai_recipe :
   brew_time : 5 mins
   add_milk : 50 ml
   add_sugar : to taste
-````
-
-Here: `chai_recipe` is an object (or map). Each recipe step is a key–value pair inside it.
-
------
 
 ## 🧾 YAML Data Types
 
