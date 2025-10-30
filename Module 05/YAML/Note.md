@@ -1,11 +1,10 @@
-Here is the provided Markdown content in a single, perfectly formatted `.md` file. I have corrected the heading hierarchy and ensured clean use of elements like horizontal rules (`---`) for optimal readability.
-
-````markdown
 # YAML — The Complete Guide
 
 ## Introduction
 
-YAML stands for **"YAML Ain’t Markup Language"**. It is a **data serialization language** designed to be **human-readable** and **easy to write**. Developers often use YAML files for configuration, automation, and defining structured data.
+YAML stands for **"YAML Ain’t Markup Language"**.
+It is a **data serialization language** designed to be **human-readable** and **easy to write**.
+Developers often use YAML files for configuration, automation, and defining structured data.
 
 YAML is popular in:
 - **Docker** (`docker-compose.yml`)
@@ -55,7 +54,6 @@ chai_recipe :
   brew_time : 5 mins
   add_milk : 50 ml
   add_sugar : to taste
-````
 
 -----
 
