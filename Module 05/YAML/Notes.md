@@ -38,6 +38,8 @@ Both `.yml` and `.yaml` extensions work — use whichever your team prefers.
 4. **Lists** — each element begins with a `-`.
 5. **Case Sensitive** — `Tea` and `tea` are different keys.
 
+Here: chai_recipe is an object (or map). Each recipe step is a key–value pair inside it.
+
 ### Example: Simple Chai Configuration
 
 ```yaml
