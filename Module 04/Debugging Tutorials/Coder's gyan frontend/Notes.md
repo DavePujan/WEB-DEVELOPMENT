@@ -1,5 +1,3 @@
-Here are fully detailed notes from the video **"Level Up Your Debugging Skills | Frontend Tips & Tricks"** in Markdown format.
-
 # Level Up Your Debugging Skills | Frontend Tips & Tricks
 
 ## **1. Introduction & Setup**
