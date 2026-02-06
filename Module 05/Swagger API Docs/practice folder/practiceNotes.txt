@@ -1,12 +1,12 @@
-refer: https://www.npmjs.com/package/swagger-autogen
+npm install express swagger-ui-express swagger-autogen
+
+project/
+ ├─ index.js
+ ├─ swagger.js
+ └─ routes.js
 
 
-$ npm install --save-dev swagger-autogen
-
-
-
-in index.js or server.js:
-
+in index js:
 const swaggerUi -> swagger-ui-express
 const swaggerFile -> swagger-output.json
 
@@ -20,10 +20,6 @@ app.listen(3000, async() => {
 })
 
 
-
-
-now see image.png
-
 in swagger:
 
 const swaggerAutogen
@@ -36,11 +32,3 @@ const outputFile =
 const routes = 
 
 swaggerAutogen(outputFile, routes, doc);
-
-
-
-
-
-than update package.json as shown in image
-
-and than:    npm run swagger
