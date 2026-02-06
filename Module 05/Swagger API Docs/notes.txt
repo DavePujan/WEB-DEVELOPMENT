@@ -1,0 +1,23 @@
+refer: https://www.npmjs.com/package/swagger-autogen
+
+$ npm install --save-dev swagger-autogen
+
+
+create swagger.js file
+const swaggerAutogen = require('swagger-autogen')();
+
+see image.png
+
+in swagger.js :
+        -   const swaggerAutogen .......
+        -   const doc = {
+                            format
+                        }
+        -   const outputFile = "./swagger-output.json"
+        -   const routes = "location where all routes are saved -> etc. ./server.json
+
+        -   swaggerAutogen(outputFile, routes, doc);
+
+than update package.json as shown in image
+
+and than:    npm run swagger
