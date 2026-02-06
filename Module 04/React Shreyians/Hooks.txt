@@ -1,0 +1,32 @@
+hooks:
+
+useSate: changes the state of the component, like adding underline / changing count when message is received.
+vscode shortcut: usess
+the function given in useState is called "setter function".
+it works asynchronously.
+
+useEffect: ek raste pe truck ja rhi thi, or hame cycle se jana tha, to hum useEffect ka use krke uske side nikl jayenge or react app (truck) lo koi problem nhi hogi. ( for api calls, dom manipulation, event listeners, etc)
+
+useRef: 
+in js we do document.querySelector("h1")
+but in react we can't do that,
+beacause react dont allow us to directly interect with the DOM.
+
+(mutable value ko hold krne ke liye jo re-render trigger na kare, ya DOM access krne ke liye)
+
+useContext: used to make data available to all the components. (globally available data)
+        context api is used to share values between components
+        we have to create context using createContext() and then provide it to the components using Provider.
+
+(global state ko consume krne ke liye without props drilling)
+
+useReducer: helps to manage complex state logic in a more predictable way. like managing array of objects, login state, etc.
+
+same as redux.
+
+Note: useContext is advanced version of useState.
+        and useReducer is advanced version of useContext.
+
+useMemo : used for performance optimization. ( for memoizing the result of a function). ( manage re-rendering of components).
+
+same for useCallback. 
