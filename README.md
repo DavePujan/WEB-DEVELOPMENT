@@ -65,23 +65,53 @@ Welcome to my Web Development learning repository! This project documents my jou
 - **Frameworks**: Next.js.
 - **Animation**: Framer Motion.
 
-### Module 05: TypeScript
-**Tech Stack:** TypeScript, YAML
+### Module 05: Full Stack with TypeScript, API Documentation & Configuration
+**Tech Stack:** TypeScript, YAML, Swagger API Documentation
 
 **What I have learnt:**
-- **YAML**:
-  - Configuration file format (often used in DevOps, but learnt here in context of TS/Project setup).
-- **How TypeScript Works**:
-  - The compilation journey: Lexer -> Parser -> Binder -> Checker -> Emitter.
-  - Understanding AST (Abstract Syntax Tree) and Symbol Tables.
-- **Project Setup**:
-  - Initializing `tsconfig.json`.
-  - Configuring `rootDir` and `outDir`.
-  - Running the compiler (`tsc`) and using `ts-node`.
-- **Type System**:
-  - **Type Inference**: How TS automatically detects types.
-  - **Type Annotations**: Explicitly defining types (`string`, `number`, `boolean`).
-  - **Strictness**: Preventing type errors during development.
+
+#### 1. **YAML** (Configuration Language):
+  - **Purpose**: Human-readable data serialization language for configuration and automation.
+  - **Use Cases**: Docker Compose, Kubernetes, GitHub Actions, CI/CD tools, and cloud infrastructure.
+  - **Syntax Basics**:
+    - Key-value pairs with colons (`:`)
+    - Lists with hyphens (`-`)
+    - Indentation-sensitive (2 spaces, no tabs)
+    - Support for comments (`#`)
+    - Can reuse data via anchors and aliases
+  - **Advantages over JSON/XML**: More readable, supports comments, handles complex nested structures.
+  - **Examples**: `docker-compose.yml`, `chai.yml` configurations.
+
+#### 2. **TypeScript Core Concepts** (L02-L06):
+  - **How TypeScript Works**:
+    - Compilation pipeline: Lexer → Parser → Binder → Checker → Emitter.
+    - Understanding AST (Abstract Syntax Tree) and Symbol Tables.
+  
+  - **Project Setup** (L03):
+    - Initializing and configuring `tsconfig.json`.
+    - Setting `rootDir` and `outDir` for source and compiled files.
+    - Running the TypeScript compiler (`tsc`) and using `ts-node` for execution.
+  
+  - **Type System** (L04-L06):
+    - **Type Annotations**: Explicitly defining types (`string`, `number`, `boolean`, etc.).
+    - **Type Inference**: How TypeScript automatically detects types from assignments.
+    - **Union Types**: Using `|` to define multiple possible types (e.g., `string | number`).
+    - **The `any` Type**: When to use and when to avoid the `any` type.
+    - **Type Narrowing & Type Guards**: Refining types within conditional blocks.
+    - **Strictness Modes**: Preventing common type errors during development.
+
+#### 3. **Swagger/OpenAPI Documentation**:
+  - **Purpose**: Auto-generating API documentation and interactive testing interface.
+  - **Setup**:
+    - Installing `swagger-autogen` and `swagger-ui-express`.
+    - Configuring Swagger in the main server file (`index.js`).
+    - Setting up routes and documentation output.
+  - **Workflow**:
+    - Create `swagger.js` file with documentation configuration.
+    - Define API endpoints with Swagger decorators.
+    - Auto-generate `swagger-output.json` from route definitions.
+    - Serve Swagger UI at `/docs` endpoint for API exploration.
+  - **Practical Implementation**: Full project setup with Express server, routes, and auto-generated API docs.
 
 ---
 
