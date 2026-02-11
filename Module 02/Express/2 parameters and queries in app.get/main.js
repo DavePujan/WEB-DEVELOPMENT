@@ -1,5 +1,10 @@
 // this is lec 88
 
+// Content: Route Parameters vs Query Strings
+
+
+
+
 /* http://localhost:3000/blog/intro-to-js?mode=dark&region=in
  here blog and intro to js are parameters and (mode = dark) and (region = in) both are query parameters.
  */
@@ -43,11 +48,26 @@ app.get('/blog/:slug/:second', (req, res) => {
     res.send(`Hello World!,this is ${req.params.slug} and introduction of ${req.parags.second}`)
 })
 
-// http://localhost:3000/blog/pqr
-app.get('/blog/:slug', (req, res) => {
-    console.log(req.params)
-    res.send(`Hello World!,this is ${req.params.slug}`)
-})
+
+
+
+
+
+// now query string
+// Used for filtering/searching/sorting.
+app.get('/products', (req, res) => {
+    console.log(req.query.category);
+});
+
+// URL:
+// /products?category=mobile&sort=price
+// req.query = { category: "mobile", sort: "price" }
+// Optional parameters.
+
+
+
+
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

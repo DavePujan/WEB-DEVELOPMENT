@@ -1,5 +1,6 @@
 // this is lec 88
 //let's check which file will be shown to us : file in public vs file in main folder
+// https://expressjs.com/en/starter/static-files.html
 
 const express = require('express')
 const app = express()
